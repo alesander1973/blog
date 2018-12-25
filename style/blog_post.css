@@ -1,0 +1,39 @@
+/*!
+ * Start Bootstrap - Blog Post (https://startbootstrap.com/template-overviews/blog-post)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-post/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px; 
+}
+.media-body {
+    /*border: 1px solid lightblue;*/
+     box-shadow: 2px 5px 5px 0px #eee;
+     padding: 10px;
+     border-radius: 8px;
+}
+
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+.article_sub_title{
+    font-size: 14px;
+    font-weight: 400; 
+}
+.article_date {
+    box-sizing: border-box;
+}
+.article-author {
+    margin-left: 20px;
+}
+ p {
+    text-indent: 20px; /* Отступ первой строки в пикселах */
+   }
+   .editDelet {
+       float: right;
+   }
+
