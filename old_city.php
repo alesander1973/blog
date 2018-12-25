@@ -90,18 +90,21 @@ if (isset($data)) {
 
             <!-- Comments Form -->
             <div class="card my-4">
-                <div class="card-header"> <h5>For Leave a Comment you need </h5>
-                <a href="sign_in.php"><button type="button" class="btn btn-info btn-rounded">Signin</button></a>
-                </div>
-                <div class="card-body">
-                    <form method="post" action="">
-                        <!--<label class="sr-only"></label>-->
-                        <div class="form-group" id="#ex3">
-                            <input name="title" type="text" class="form-control" placeholder="Post title">
-                            <textarea class="form-control" rows="2" name="article"></textarea>
-                        </div>
-                    </form>
-                </div>
+                <?php if (empty($_SESSION['uid'])): ?>
+                    <div class="card-header"> <h5>For Leave a Comment you need </h5>
+                        <a href="sign_in.php"><button type="button" class="btn btn-info btn-rounded">Signin</button></a>
+                    </div>
+                <?php else: ?>
+                    <div class="card-body">
+                        <form method="post" action="">
+                            <!--<label class="sr-only"></label>-->
+                            <div class="form-group" id="#ex3">
+                                <input name="title" type="text" class="form-control" placeholder="Post title">
+                                <textarea class="form-control" rows="2" name="article"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                <?php endif; ?>
             </div>
             <?php if (isset($data)) : ?>
                 <?php foreach ($data as $post) : ?>
